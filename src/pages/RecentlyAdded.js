@@ -26,7 +26,7 @@ function RecentlyAdded() {
             {
                 added.map((item, index) => {
                     return (
-                        <GameCard key={index} thumbnail={item.thumbnail} title={item.title} genre={item.genre} platform={item.platform} />
+                        <GameCard key={index} thumbnail={item.thumbnail} title={item.title} genre={item.genre} platform={item.platform} id={item.id} />
                     );
                 })
             }
