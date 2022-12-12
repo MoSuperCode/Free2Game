@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import GameCard from "../components/GameCard/GameCard";
 
 
 function AllGames() {
@@ -20,16 +21,19 @@ function AllGames() {
             });
 
     }, []);
+    if (add === undefined) {
+        return;
+    }
     return (
-        <div>
-            <h1>{add.map((a, index) => {
+        <div className="cardContainer">
+
+            {add.map((item, index) => {
                 return (
-                    <div key={index}>
-                        <h1>{a.id}</h1>
-                        <h1>{a[0].id}</h1>
-                    </div>
+
+                    <GameCard key={index} thumbnail={item.thumbnail} title={item.title} genre={item.genre} platform={item.platform} />
+
                 );
-            })}</h1>
+            })}
 
         </div>
     );
