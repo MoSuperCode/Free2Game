@@ -4,10 +4,12 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home';
 import AllGames from './pages/AllGames';
 import DetailView from './pages/DetailView';
+import RecentlyAdded from './pages/RecentlyAdded';
 
 function App() {
   return (
     <div className="App">
+      <RecentlyAdded />
       <Router>
         <Routes>
           <Route path="/" element={<> <Navbar /> <Home /> </>} />
