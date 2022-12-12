@@ -11,7 +11,7 @@ export default function SideMenu() {
         <side className="sideMenu">
             <Link to="/" ><img src={Homepic}></img></Link>
             <Link to="/allgames" ><img src={Controller}></img></Link>
-            <Link to="/" ><img src={controls}></img></Link>
+            <Link to="/recentylyadded" ><img src={controls}></img></Link>
         </side>
     );
 }
