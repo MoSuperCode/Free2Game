@@ -8,21 +8,21 @@ export default function GameCard(props) {
     let logoPlatform;
     if (props.platform === "Web Browser") {
         logoPlatform = web;
-        console.log("das ist if");
+   
     } else if (props.platform === "PC (Windows)") {
         logoPlatform = windows;
-        console.log("das ist else");
+       
     }
     return (
         <div className="gameCards">
-            <img src={props.thumbnail}></img>
+            <img className="thumb" src={props.thumbnail} alt="thmumpdicksuckKakaFixihartman"></img>
             <div>
                 <h2>{props.title}</h2>
                 <p>{props.short_description}</p>
                 <button>Read More</button>
             </div>
             <div className="gameCardFlex">
-                <img src={logoPlatform} ></img>
+                <img src={logoPlatform}alt="thmumpdicksuckFakaFixihartman" ></img>
                 <h3>{props.genre}</h3>
             </div>
         </div>

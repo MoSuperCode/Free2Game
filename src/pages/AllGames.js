@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import GameCard from "../components/GameCard/GameCard";
 
 
 
@@ -24,17 +25,17 @@ function AllGames() {
         return
     }
     return (
-        <div>
+        <div className="cardContainer">
             
-            <h1>{add.map((a, index) =>{
+{add.map((item, index) =>{
                 return(
-<div key={index}>
-<h1>{a.id}</h1>
-<h1>{a.title}</h1>
-</div>
-        )    })}</h1>
+
+<GameCard key={index} thumbnail={item.thumbnail} title={item.title} genre={item.genre} platform={item.platform} />
+
+        )    })}
         
         </div>
     );
+    
 }
 export default AllGames;

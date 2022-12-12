@@ -1,17 +1,18 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AllGames from './pages/AllGames';
 
 function App() {
   return (
     <div className="App">
-
+<AllGames />
       
-      <Router>
+      {/* <Router>
         <Routes>
      
 
         </Routes>
-      </Router> 
+      </Router>  */}
     </div>
   );
 };
