@@ -9,10 +9,8 @@ export default function GameCard(props) {
     let logoPlatform;
     if (props.platform === "Web Browser") {
         logoPlatform = web;
-        console.log("das ist if");
     } else if (props.platform === "PC (Windows)") {
         logoPlatform = windows;
-        console.log("das ist else");
     }
     return (
         <div className="gameCards">
