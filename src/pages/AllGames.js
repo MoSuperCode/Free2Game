@@ -20,13 +20,17 @@ function AllGames() {
             });
 
     }, []);
+    if(add === undefined){
+        return
+    }
     return (
         <div>
+            
             <h1>{add.map((a, index) =>{
                 return(
 <div key={index}>
 <h1>{a.id}</h1>
-<h1>{a[0].id}</h1>
+<h1>{a.title}</h1>
 </div>
         )    })}</h1>
         
