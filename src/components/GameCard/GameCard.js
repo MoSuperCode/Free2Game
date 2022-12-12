@@ -1,13 +1,17 @@
 import "./GameCard.css";
-
-import React, { useState } from 'react';
+//import web from '../../assets/img/Web.svg';
+import windows from '../../assets/img/Windows.png';
+import web from '../../assets/img/Browser.png';
+import React from 'react';
 
 export default function GameCard(props) {
-    const [platformSrc, setPlatform] = useState("");
-    if (props.platform === "Web Broser") {
-        setPlatform("../../assets/img/Web.svg");
+    let logoPlatform;
+    if (props.platform === "Web Browser") {
+        logoPlatform = web;
+        console.log("das ist if");
     } else if (props.platform === "PC (Windows)") {
-        setPlatform("../../assets/img/Windows.svg");
+        logoPlatform = windows;
+        console.log("das ist else");
     }
     return (
         <div className="gameCards">
@@ -18,7 +22,7 @@ export default function GameCard(props) {
                 <button>Read More</button>
             </div>
             <div className="gameCardFlex">
-                <img src={platformSrc}></img>
+                <img src={logoPlatform} ></img>
                 <h3>{props.genre}</h3>
             </div>
         </div>
