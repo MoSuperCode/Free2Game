@@ -1,6 +1,7 @@
 import "./GameCard.css";
 
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 export default function GameCard(props) {
     const [platformSrc, setPlatform] = useState("");
@@ -15,7 +16,7 @@ export default function GameCard(props) {
             <div>
                 <h2>{props.title}</h2>
                 <p>{props.short_description}</p>
-                <button>Read More</button>
+                <Link to={`./detailview/${props.id}`} ><button>Read More</button></Link>
             </div>
             <div className="gameCardFlex">
                 <img src={platformSrc}></img>
