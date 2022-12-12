@@ -1,13 +1,16 @@
-
-import './Navbar.js';
-
+import './Navbar.css';
 import React from 'react';
+import Logo from '../../assets/img/Logo.svg';
 
 export default function Navbar() {
     return (
-        <nav>
-            <img></img>
-            <h1></h1>
-        </nav>
+        <nav className="navbarFlex">
+            <div className="flex">
+                <img src={Logo} alt="s"></img>
+                <h1>FREE2GAME</h1>
+            </div>
+            <input placeholder='🔎' style={{ textAlign: 'right' }} ></input>
+        </nav >
+
     );
 }

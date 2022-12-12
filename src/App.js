@@ -1,5 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home';
+import AllGames from './pages/AllGames';
+import DetailView from './pages/DetailView';
 import RecentlyAdded from './pages/RecentlyAdded';
 
 function App() {
@@ -8,8 +12,9 @@ function App() {
       <RecentlyAdded />
       <Router>
         <Routes>
-
-
+          <Route path="/" element={<> <Navbar /> <Home /> </>} />
+          <Route path="/allgames" element={<> <Navbar /> <AllGames /> </>} />
+          <Route path="/detailview/:id" element={<> <Navbar /> <DetailView /> </>} />
         </Routes>
       </Router>
     </div>
