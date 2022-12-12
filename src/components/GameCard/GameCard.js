@@ -3,6 +3,7 @@ import "./GameCard.css";
 import windows from '../../assets/img/Windows.png';
 import web from '../../assets/img/Browser.png';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function GameCard(props) {
     let logoPlatform;
