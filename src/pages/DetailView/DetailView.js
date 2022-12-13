@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 export default function DetailView() {
 
     const { id } = useParams();
-
+    // eslint-disable-next-line
     const [api, setApi] = useState(`https://www.freetogame.com/api/game?id=${id}`);
     const [detail, setDetail] = useState();
 
