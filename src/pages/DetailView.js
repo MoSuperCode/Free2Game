@@ -23,7 +23,7 @@ export default function DetailView() {
                 console.log(DetailRes);
             });
 
-    }, [detail]);
+    }, [api]);
 
 
 
