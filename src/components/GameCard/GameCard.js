@@ -19,8 +19,10 @@ export default function GameCard(props) {
                 <p>{props.short_description}</p>
                 <Link  to={`./detailview/${props.id}`}><button className="read"  >Read More</button></Link>
             </div>
+
             <div className="gameCardFlex">
                 <img src={logoPlatform} alt="thmumpdicksuckFakaFixihartman" ></img>
+
                 <h3>{props.genre}</h3>
             </div>
         </div>
