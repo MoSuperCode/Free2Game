@@ -10,7 +10,7 @@ import SideMenu from './components/SideMenu/SideMenu';
 function App() {
   return (
     <div className="App">
-
+      <Navbar />
       <Router>
         <Routes>
           <Route path="/" element={<> <Navbar /> <SideMenu /> <Home /> </>} />
