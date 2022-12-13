@@ -8,10 +8,10 @@ import { Link } from 'react-router-dom';
 
 export default function SideMenu() {
     return (
-        <side className="sideMenu">
+        <div className="sideMenu">
             <Link to="/" ><img src={Homepic}></img></Link>
             <Link to="/allgames" ><img src={Controller}></img></Link>
-            <Link to="/recentylyadded" ><img src={controls}></img></Link>
-        </side>
+            <Link to="/recentlyadded" ><img src={controls}></img></Link>
+        </div>
     );
 }
