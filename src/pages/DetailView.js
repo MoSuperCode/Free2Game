@@ -6,9 +6,12 @@ export default function DetailView() {
     const { id } = useParams();
 
     const [api, setApi] = useState(`https://www.freetogame.com/api/game?id=${id}`);
-    console.log(api);
     const [detail, setDetail] = useState();
+
+
+
     useEffect(() => {
+
 
 
         fetch(api)
@@ -23,7 +26,54 @@ export default function DetailView() {
     }, [api]);
 
 
+
     return (
-        <div>DetailView</div>
+        <main>
+            <div>
+                <img src={detail?.thumbnail} alt='asdf'></img>
+            </div>
+            <article>
+                <div>
+                    <h1>{detail?.title}</h1>
+                    <img src={detail?.screenshots[0].image}></img>
+                    <p>Platfrom: {detail?.platfrom}</p>
+                    <p>{detail?.genre}</p>
+                    <a href={detail?.game_url}><button>Play Now</button></a>
+                </div>
+                <div>
+                    <p>About</p>
+                    <p>{detail?.description}</p>
+                </div>
+            </article>
+            <article>
+                <img src={detail?.screenshots[1].image} ></img>
+                <img src={detail?.screenshots[2].image} ></img>
+            </article>
+            <section>
+                <div>
+                    <p>Additional Information</p>
+                    <p>Please note this free-to-play game may or my not offer optional in-game purchases</p>
+                    <p>Devloper: {detail?.developer}</p>
+                    <p>Publisher: {detail?.publischer}</p>
+                    <p>Release Date : {detail?.release_date}</p>
+                </div>
+                {detail?.platform === "Windows" && <div>
+                    <p>Minimum System Requierments (Windows)</p>
+                    <p>OS: {detail?.minimum_system_requirements?.os}</p>
+                    <p>Memory: {detail?.minimum_system_requirements?.memory}</p>
+                    <p>Storage: {detail?.minimum_system_requirements?.storage}</p>
+                    <p>Processor: {detail?.minimum_system_requirements?.processor}</p>
+                    <p>Graphics: {detail?.minimum_system_requirements?.graphics}</p>
+                </div>}
+            </section>
+        </main>
     );
 }
+
+
+
+
+
+
+
+

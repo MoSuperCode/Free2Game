@@ -18,6 +18,7 @@ function RecentlyAdded() {
 
     }, []);
 
+
     return (
         <section>
             <div>
