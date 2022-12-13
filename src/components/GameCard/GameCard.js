@@ -13,11 +13,11 @@ export default function GameCard(props) {
     }
     return (
         <div className="gameCards">
-            <img src={props.thumbnail} alt="thmumpdicksuckFakaFixihartman" ></img>
+            <img className="bild" src={props.thumbnail} alt="thmumpdicksuckFakaFixihartman" ></img>
             <div>
                 <h2>{props.title}</h2>
                 <p>{props.short_description}</p>
-                <Link to={`./detailview/${props.id}`}><button>Read More</button></Link>
+                <Link  to={`./detailview/${props.id}`}><button className="read"  >Read More</button></Link>
             </div>
             <div className="gameCardFlex">
                 <img src={logoPlatform} alt="thmumpdicksuckFakaFixihartman" ></img>

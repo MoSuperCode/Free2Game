@@ -9,6 +9,7 @@ import RecentlyAdded from './pages/RecentlyAdded';
 function App() {
   return (
     <div className="App">
+  
       <Router>
         <Routes>
           <Route path="/" element={<> <Navbar /> <Home /> </>} />
