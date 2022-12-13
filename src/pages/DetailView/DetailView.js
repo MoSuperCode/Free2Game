@@ -11,9 +11,6 @@ export default function DetailView() {
 
 
     useEffect(() => {
-
-
-
         fetch(api)
             .then((response) => {
                 return response.json();
@@ -23,7 +20,7 @@ export default function DetailView() {
                 console.log(DetailRes);
             });
 
-    }, [detail]);
+    }, [api]);
 
 
 

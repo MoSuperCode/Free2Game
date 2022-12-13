@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import GameCard from "../components/GameCard/GameCard";
+import GameCard from "../../components/GameCard/GameCard";
 
 function AllGames() {
 

@@ -1,0 +1,28 @@
+/* ================= */
+/* == HeroSection == */
+/* ================= */
+
+.HeroPic {
+    width: 100%;
+    object-fit: contain;
+}
+
+.HeroTitle {
+    position: absolute;
+    font-size: 3rem;
+    left: 154px;
+    top: 394px;
+    line-height: 57.6px;
+    width: 388px;
+    -webkit-text-stroke: 0.001px rgba(0, 0, 0, 0.211);
+    text-shadow: white .1px .1px;
+}
+
+/* ======================= */
+/* = RecentlyAddsSection = */
+/* ======================= */
+.homeRecentlyAddedFlexContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

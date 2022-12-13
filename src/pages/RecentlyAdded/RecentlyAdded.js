@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import GameCard from '../components/GameCard/GameCard';
+import GameCard from '../../components/GameCard/GameCard';
 function RecentlyAdded() {
     const [added, setAdded] = useState([]);
     const [api, setApi] = useState('https://www.freetogame.com/api/games?sort-by=release-date');

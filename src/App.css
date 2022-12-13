@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Oswald;
+    src: url(./assets/fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Titillium_Web;
+    src: url(./assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
 body {
     background-color: #040f14;
     color: white;
@@ -5,4 +15,17 @@ body {
 
 .App {
     margin-left: 3.5rem;
+}
+
+p {
+    font-family: Titillium_Web;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Oswald;
 }
