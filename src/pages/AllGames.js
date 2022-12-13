@@ -19,7 +19,7 @@ function AllGames() {
                 console.log(sortAdded);
             });
 
-    },[]);
+    }, [api]);
     if (add === undefined) {
         return;
     }

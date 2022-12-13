@@ -17,6 +17,7 @@ function App() {
           <Route path="/allgames" element={<> <Navbar /> <SideMenu /> <AllGames /> </>} />
           <Route path="recentlyadded/detailview/:id" element={<> <Navbar /> <SideMenu /> <DetailView /> </>} />
           <Route path="/recentlyadded" element={<> <Navbar /> <SideMenu /> <RecentlyAdded /> </>} />
+          <Route path="/allgames/detailview/:id" element={<> <Navbar /> <SideMenu /> <DetailView /> </>} />
         </Routes>
       </Router>
     </div>
