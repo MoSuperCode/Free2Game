@@ -9,11 +9,12 @@ import RecentlyAdded from './pages/RecentlyAdded';
 function App() {
   return (
     <div className="App">
-  
+
       <Router>
         <Routes>
           <Route path="/" element={<> <Navbar /> <Home /> </>} />
           <Route path="/allgames" element={<> <Navbar /> <AllGames /> </>} />
+          <Route path="/allgames/detailview/:id" element={<> <Navbar /> <DetailView /> </>} />
           <Route path="recentlyadded/detailview/:id" element={<> <Navbar /> <DetailView /> </>} />
           <Route path="/recentlyadded" element={<> <Navbar /> <RecentlyAdded /> </>} />
         </Routes>
