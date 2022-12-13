@@ -1,10 +1,22 @@
 .sideMenu {
     position: fixed;
-
+    width: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    top: 0;
+    gap: 20px 0;
+    top: 0vh;
     left: 0;
     height: 100vh;
+    border-right: 2px solid white;
+
+}
+
+.Hamburger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
 }
