@@ -11,6 +11,5 @@ export default function Navbar() {
             </div>
             <input placeholder='🔎' style={{ textAlign: 'right' }} ></input>
         </nav >
-
     );
 }
