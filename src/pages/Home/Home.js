@@ -15,7 +15,7 @@ export default function Home() {
                 setRecentGamesArray(recentGames);
             });
     }, []);
-    const recentlyAddedGames = recentGames.slice(0, 4);
+    const recentlyAddedGames = recentGames.slice(0, 5);
     //======================Second£===================================
 
     useEffect(() => {
@@ -40,12 +40,12 @@ export default function Home() {
     return (
         <div className='Home'>
             <section className='Hero'>
-                <h1 className='HeroTitle'>Find & track the best free-to-play games!</h1>
+                <h1 className='HeroTitle'>FIND & TRACK THE BEST FREE-TO-PLAY GAMES!</h1>
             </section>
 
             <section className='Recently Added'>
                 <h2>Recently Added</h2>
-                <div className='homeRecentlyAddedFlexContainer'>
+                <div className='homeFlexContainer'>
                     {recentlyAddedGames.map((game, index) => {
                         return <GameCard key={index} thumbnail={game.thumbnail} title={game.title} short_description={game.short_description} platform={game.platform} genre={game.genre} id={game.id} />;
                     })}
@@ -54,7 +54,7 @@ export default function Home() {
 
             <section className='Top4Pc'>
                 <h2>Top 4 Games for PC in DATE</h2>
-                <div className='homeRecentlyAddedFlexContainer'>
+                <div className='homeFlexContainer'>
                     {Top4PcGames.map((game, index) => {
                         return <GameCard key={index} thumbnail={game.thumbnail} title={game.title} platform={game.platform} genre={game.genre} id={game.id} />;
                     })}
@@ -63,7 +63,7 @@ export default function Home() {
 
             <section className='Top4Browser'>
                 <h2>Top 4 Games for Browser in DATE</h2>
-                <div className='homeRecentlyAddedFlexContainer'>
+                <div className='homeFlexContainer'>
                     {Top4BrowserGames.map((game, index) => {
                         return <GameCard key={index} thumbnail={game.thumbnail} title={game.title} platform={game.platform} genre={game.genre} id={game.id} />;
                     })}

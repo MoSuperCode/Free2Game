@@ -1,20 +1,22 @@
 .gameCards {
-    width: 15rem;
-    min-height: 27rem;
-    height: fit-content;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    flex-direction: column;
+    width: 15rem;
+    min-height: 28rem;
+    height: fit-content;
     text-align: center;
-    padding: .5rem;
+    padding: .2rem;
     border: solid 1px;
     border-radius: .8rem;
     background-color: #102130;
+    transition: .3s;
 }
 
 .MainContainer {
     height: 100vh;
     margin-left: 50px;
+
 }
 
 .read {
@@ -23,7 +25,7 @@
     font-size: 15pt;
     border-radius: 1rem;
     padding: .3rem .5rem;
-    text-align: center;
+
     cursor: pointer;
 }
 
@@ -40,7 +42,7 @@
 .bild {
     width: 15rem;
     height: 10rem;
-
+    border-radius: .7rem;
 }
 
 .fContainer {
