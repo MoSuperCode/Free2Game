@@ -1,25 +1,45 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
-import lol from '../../assets/img/LOL.png';
 import GameCard from '../../components/GameCard/GameCard';
 
 export default function Home() {
-    const [api, setApi] = useState('https://www.freetogame.com/api/games?sort-by=release-date');
-    const [array, setArray] = useState([]);
+    const [recentGames, setRecentGamesArray] = useState([]);
+    const [topPc, setTopPcArray] = useState([]);
+    const [topBrowser, setTopBrowserArray] = useState([]);
 
+    //=====================First======================================
     useEffect(() => {
-        fetch(api)
+        fetch('https://www.freetogame.com/api/games?sort-by=release-date')
             .then((response) => (response.json()))
             .then((recentGames) => {
-                setArray(recentGames);
+                setRecentGamesArray(recentGames);
+            });
+    }, []);
+    const recentlyAddedGames = recentGames.slice(0, 4);
+    //======================Second£===================================
+
+    useEffect(() => {
+        fetch('https://www.freetogame.com/api/games?platform=pc&sort-by=popularity')
+            .then((response) => (response.json()))
+            .then((topPcGames) => {
+                setTopPcArray(topPcGames);
             });
 
-    }, [api]);
-    const recentlyAddedGames = array.slice(0, 4);
+    }, []);
+    const Top4PcGames = topPc.slice(0, 4);
+    //================================================================
+    useEffect(() => {
+        fetch('https://www.freetogame.com/api/games?platform=browser&sort-by=popularity')
+            .then((response) => (response.json()))
+            .then((topBrowserGames) => {
+                setTopBrowserArray(topBrowserGames);
+            });
+    }, []);
+    const Top4BrowserGames = topBrowser.slice(0, 4);
+    //================================================================
     return (
         <div className='Home'>
             <section className='Hero'>
-                <img className='HeroPic' src={lol} ></img>
                 <h1 className='HeroTitle'>Find & track the best free-to-play games!</h1>
             </section>
 
@@ -31,8 +51,25 @@ export default function Home() {
                     })}
                 </div>
             </section>
-            <section className='Top4Pc'></section>
-            <section className='Top4Browser'></section>
+
+            <section className='Top4Pc'>
+                <h2>Top 4 Games for PC in DATE</h2>
+                <div className='homeRecentlyAddedFlexContainer'>
+                    {Top4PcGames.map((game, index) => {
+                        return <GameCard key={index} thumbnail={game.thumbnail} title={game.title} platform={game.platform} genre={game.genre} id={game.id} />;
+                    })}
+                </div>
+            </section>
+
+            <section className='Top4Browser'>
+                <h2>Top 4 Games for Browser in DATE</h2>
+                <div className='homeRecentlyAddedFlexContainer'>
+                    {Top4BrowserGames.map((game, index) => {
+                        return <GameCard key={index} thumbnail={game.thumbnail} title={game.title} platform={game.platform} genre={game.genre} id={game.id} />;
+                    })}
+                </div>
+            </section>
         </div>
     );
 };
+

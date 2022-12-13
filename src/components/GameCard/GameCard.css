@@ -24,7 +24,7 @@
     border-radius: 1rem;
     padding: .3rem .5rem;
     text-align: center;
-
+    cursor: pointer;
 }
 
 .cardContainer {
@@ -74,4 +74,8 @@ button {
 
 .description {
     font-size: .8rem;
+}
+
+a {
+    color: white;
 }

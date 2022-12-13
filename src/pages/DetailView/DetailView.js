@@ -32,7 +32,7 @@ export default function DetailView() {
             <article>
                 <div>
                     <h1>{detail?.title}</h1>
-                    <img src={detail?.screenshots[0].image}></img>
+                    <img alt='.' src={detail?.screenshots[0].image}></img>
                     <p>Platfrom: {detail?.platfrom}</p>
                     <p>{detail?.genre}</p>
                     <a href={detail?.game_url}><button>Play Now</button></a>
@@ -43,8 +43,8 @@ export default function DetailView() {
                 </div>
             </article>
             <article>
-                <img src={detail?.screenshots[1].image} ></img>
-                <img src={detail?.screenshots[2].image} ></img>
+                <img alt='.' src={detail?.screenshots[1].image} ></img>
+                <img alt='.' src={detail?.screenshots[2].image} ></img>
             </article>
             <section>
                 <div>
