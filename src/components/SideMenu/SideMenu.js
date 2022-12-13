@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 export default function SideMenu() {
     return (
         <div className='border'>
-            <Link to=""><img alt='.' className='Hamburger' src={hamburger}></img></Link>
+            <img alt='.' className='Hamburger' src={hamburger}></img>
             <div className="sideMenu">
                 <Link to="/" ><img alt='.' src={Homepic}></img></Link>
                 <Link to="/allgames" ><img alt='.' src={Controller}></img></Link>
