@@ -1,0 +1,10 @@
+.sideMenu {
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
