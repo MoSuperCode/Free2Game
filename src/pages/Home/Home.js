@@ -15,7 +15,7 @@ export default function Home() {
                 setRecentGamesArray(recentGames);
             });
     }, []);
-    const recentlyAddedGames = recentGames.slice(0, 5);
+    const recentlyAddedGames = recentGames.slice(0, 4);
     //======================Second£===================================
 
     useEffect(() => {
