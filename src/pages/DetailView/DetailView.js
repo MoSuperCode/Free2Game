@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-
+import Comments from '../../components/comments/Comments';
 export default function DetailView() {
 
     const { id } = useParams();
@@ -33,7 +33,7 @@ export default function DetailView() {
                 <div>
                     <h1>{detail?.title}</h1>
                     <img alt='.' src={detail?.screenshots[0].image}></img>
-                    <p>Platfrom: {detail?.platfrom}</p>
+                    <p>Platfrom: {detail?.platform}</p>
                     <p>{detail?.genre}</p>
                     <a href={detail?.game_url}><button>Play Now</button></a>
                 </div>
@@ -46,12 +46,13 @@ export default function DetailView() {
                 <img alt='.' src={detail?.screenshots[1].image} ></img>
                 <img alt='.' src={detail?.screenshots[2].image} ></img>
             </article>
+            {/* <Comments /> */}
             <section>
                 <div>
                     <p>Additional Information</p>
                     <p>Please note this free-to-play game may or my not offer optional in-game purchases</p>
                     <p>Devloper: {detail?.developer}</p>
-                    <p>Publisher: {detail?.publischer}</p>
+                    <p>Publisher: {detail?.publisher}</p>
                     <p>Release Date : {detail?.release_date}</p>
                 </div>
                 {detail?.platform === "Windows" && <div>

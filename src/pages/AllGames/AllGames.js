@@ -20,42 +20,50 @@ function AllGames() {
             });
 
     }, [api]);
+
+
+    const [search, setSearch] = useState('');
     if (add === undefined) {
         return;
     }
     return (
-        <span className="mainContainer">
-            <div className="SortBtn">
-                <button onClick={() => {
-                    AllGames(
-                        setApi(`https://www.freetogame.com/api/games?sort-by=alphabetical`));
-                }}>A-Z</button>
-                <button onClick={() => {
-                    AllGames(
-                        setApi(`https://www.freetogame.com/api/games?sort-by=release-date`));
-                }}>Release-date</button>
-                <button onClick={() => {
-                    AllGames(
-                        setApi(`https://www.freetogame.com/api/games?sort-by=popularity`));
-                }}>Popularity</button>
+        <main>
+            <input onChange={(e) => setSearch(e.target.value)} className='input' placeholder='🔎' style={{ textAlign: 'right' }}  ></input>
+            <span className="mainContainer">
+                <div className="SortBtn">
+                    <button onClick={() => {
+                        AllGames(
+                            setApi(`https://www.freetogame.com/api/games?sort-by=alphabetical`));
+                    }}>A-Z</button>
+                    <button onClick={() => {
+                        AllGames(
+                            setApi(`https://www.freetogame.com/api/games?sort-by=release-date`));
+                    }}>Release-date</button>
+                    <button onClick={() => {
+                        AllGames(
+                            setApi(`https://www.freetogame.com/api/games?sort-by=popularity`));
+                    }}>Popularity</button>
 
-                <button onClick={() => {
-                    AllGames(
-                        setApi("https://www.freetogame.com/api/games?category=shooter"));
-                }}>SHOOTER</button>
+                    <button onClick={() => {
+                        AllGames(
+                            setApi("https://www.freetogame.com/api/games?category=shooter"));
+                    }}>SHOOTER</button>
 
-            </div>
+                </div>
 
 
-            <div className="cardContainer">
+                <div className="cardContainer">
 
-                {add.map((item, index) => {
-                    return (
-                        <GameCard key={index} thumbnail={item.thumbnail} title={item.title} genre={item.genre} platform={item.platform} id={item.id} />
-                    );
-                })}
-            </div>
-        </span>
+                    {add.filter((item) => {
+                        return search.toLowerCase() === '' ? item : item.title.toLowerCase().includes(search);
+                    }).map((item, index) => {
+                        return (
+                            <GameCard key={index} thumbnail={item.thumbnail} title={item.title} genre={item.genre} platform={item.platform} id={item.id} />
+                        );
+                    })}
+                </div>
+            </span>
+        </main>
     );
 }
 
