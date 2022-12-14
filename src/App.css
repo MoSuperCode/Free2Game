@@ -31,14 +31,15 @@ h6 {
 }
 
 
-.Fbtn{
-display: flex;
-justify-content: center;
-flex-direction: row;
-gap: 5rem;
-margin: 5rem;
+.Fbtn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5rem;
+    margin: 5rem;
 }
-details{
+
+details {
     width: 33%;
 }
 
@@ -46,60 +47,73 @@ details{
     display: flex;
     justify-content: center;
     gap: 1rem;
- height: 10rem;
+    height: 10rem;
 
 }
 
 .SortBtn1 Button {
-    margin: 1rem;
-    background-color: red;
+    margin: .1rem;
+    background-color: rgb(151, 54, 54);
+
     color: aliceblue;
-    font-size: 15pt;
-    border-radius: 1rem;
+    font-size: 25pt;
+    align-self: center;
+    border: solid  rgb(255, 255, 255);
     padding: .3rem .5rem;
     text-align: center;
+    width: 100%;
 }
+
 .SortBtn2 {
     display: flex;
     justify-content: center;
-    gap: 1rem;
- height: 10rem;
-
+    align-items: center;
+    height: 10rem;
 }
 
 .SortBtn2 Button {
-    margin: 1rem;
-    background-color: red;
+    margin: .1rem;
+    background-color: rgb(151, 54, 54);
+
     color: aliceblue;
-    font-size: 15pt;
-    border-radius: 1rem;
+    font-size: 25pt;
+
+    align-self: center;
+    border: solid rgb(255, 255, 255);
     padding: .3rem .5rem;
     text-align: center;
+    width: 100%;
 }
+
 .SortBtn3 {
     display: flex;
     justify-content: center;
-    gap: 1rem;   
-    overflow :scroll;
- height: 13rem;
+    gap: 1rem;
+    overflow: scroll;
+    height: 13rem;
 }
 
 .SortBtn3 Button {
-    margin: 1rem;
-    background-color: red;
+    margin: .1rem;
+    background-color: rgb(151, 54, 54);
     color: aliceblue;
-    font-size: 15pt;
-    border-radius: 1rem;
+    font-size: 25pt;
+
+    align-self: center;
+    border: solid rgb(255, 255, 255);
     padding: .3rem .5rem;
     text-align: center;
+    width: 100%;
 
 }
-summary{
-    margin: 1rem;
+
+summary {
+ 
     background-color: red;
     color: aliceblue;
-    font-size: 15pt;
-    border-radius: 1rem;
+    font-size: 30pt;
+    border-radius: 1rem 1rem 0 0;
     padding: .3rem .5rem;
     text-align: center;
+    font-weight: 900;
 }

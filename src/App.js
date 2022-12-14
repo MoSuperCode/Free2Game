@@ -8,6 +8,27 @@ import RecentlyAdded from './pages/RecentlyAdded/RecentlyAdded';
 import SideMenu from './components/SideMenu/SideMenu';
 
 function App() {
+  let myEm = [
+    "🕹",
+    "👾🕹👾",
+    "👾👾👾",
+    "👾👾👾👾",
+    "👾👾🔎👾👾",
+    "👾👾👾👾",
+    "👾👾👾",
+    "👾👾",
+    "👾",
+    "🤖" 
+  ];
+let urlAnimate = ()=>{
+  window.location.hash=
+  myEm[Math.floor((Date.now()/ 1000) % myEm.length)];
+  setTimeout(urlAnimate, 70)
+}
+urlAnimate()
+
+
+  
   return (
     <div className="App">
 

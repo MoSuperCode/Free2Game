@@ -30,7 +30,7 @@ function AllGames() {
         <span className="mainContainer">
             <div className="Fbtn">
                 <details className="SortBtn1">
-                    <summary>Sort by</summary>
+                    <summary>Platform</summary>
                     <button onClick={() => {
 
                         setP(`pc`);
