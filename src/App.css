@@ -29,3 +29,77 @@ h5,
 h6 {
     font-family: Oswald;
 }
+
+
+.Fbtn{
+display: flex;
+justify-content: center;
+flex-direction: row;
+gap: 5rem;
+margin: 5rem;
+}
+details{
+    width: 33%;
+}
+
+.SortBtn1 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+ height: 10rem;
+
+}
+
+.SortBtn1 Button {
+    margin: 1rem;
+    background-color: red;
+    color: aliceblue;
+    font-size: 15pt;
+    border-radius: 1rem;
+    padding: .3rem .5rem;
+    text-align: center;
+}
+.SortBtn2 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+ height: 10rem;
+
+}
+
+.SortBtn2 Button {
+    margin: 1rem;
+    background-color: red;
+    color: aliceblue;
+    font-size: 15pt;
+    border-radius: 1rem;
+    padding: .3rem .5rem;
+    text-align: center;
+}
+.SortBtn3 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;   
+    overflow :scroll;
+ height: 10rem;
+}
+
+.SortBtn3 Button {
+    margin: 1rem;
+    background-color: red;
+    color: aliceblue;
+    font-size: 15pt;
+    border-radius: 1rem;
+    padding: .3rem .5rem;
+    text-align: center;
+
+}
+summary{
+    margin: 1rem;
+    background-color: red;
+    color: aliceblue;
+    font-size: 15pt;
+    border-radius: 1rem;
+    padding: .3rem .5rem;
+    text-align: center;
+}
