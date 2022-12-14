@@ -28,6 +28,7 @@ function AllGames() {
     }
     return (
         <span className="mainContainer">
+            <div className="bg"></div>
             <div className="Fbtn">
                 <details className="SortBtn1">
                     <summary>Platform</summary>
