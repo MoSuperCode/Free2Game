@@ -23,6 +23,7 @@ export default function Home() {
             .then((response) => (response.json()))
             .then((topPcGames) => {
                 setTopPcArray(topPcGames);
+                console.log(topPcGames);
             });
 
     }, []);

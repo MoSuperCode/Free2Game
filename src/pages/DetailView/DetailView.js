@@ -25,38 +25,37 @@ export default function DetailView() {
 
 
     return (
-        <main>
-            <div>
-                <img src={detail?.thumbnail} alt='asdf'></img>
+        <main className='m'>
+            <div className='AGWR'>
+                <img className='GWE' src={detail?.thumbnail} alt='asdf'></img>
             </div>
             <article>
-                <div>
+                <div className='fiD'>
                     <h1>{detail?.title}</h1>
-                    <img alt='.' src={detail?.screenshots[0].image}></img>
+                    <img alt='.' className='tBild' src={detail?.screenshots[0].image}></img>
                     <p>Platfrom: {detail?.platform}</p>
                     <p>{detail?.genre}</p>
-                    <a href={detail?.game_url}><button>Play Now</button></a>
+                    <a href={detail?.game_url}><button className='play'>Play Now</button></a>
                 </div>
-                <div>
-                    <p>About</p>
-                    <p>{detail?.description}</p>
+                <div className='scD'>
+                    <h1>About</h1>
+                    <p className='txt'>{detail?.description}</p>
                 </div>
             </article>
-            <article>
+            <article className='AIMG'>
                 <img alt='.' src={detail?.screenshots[1].image} ></img>
                 <img alt='.' src={detail?.screenshots[2].image} ></img>
             </article>
-            {/* <Comments /> */}
-            <section>
+            <section className='foot'>
                 <div>
-                    <p>Additional Information</p>
+                    <h1>Additional Information</h1>
                     <p>Please note this free-to-play game may or my not offer optional in-game purchases</p>
                     <p>Devloper: {detail?.developer}</p>
                     <p>Publisher: {detail?.publisher}</p>
                     <p>Release Date : {detail?.release_date}</p>
                 </div>
                 {detail?.platform === "Windows" && <div>
-                    <p>Minimum System Requierments (Windows)</p>
+                    <h1>Minimum System Requierments (Windows)</h1>
                     <p>OS: {detail?.minimum_system_requirements?.os}</p>
                     <p>Memory: {detail?.minimum_system_requirements?.memory}</p>
                     <p>Storage: {detail?.minimum_system_requirements?.storage}</p>

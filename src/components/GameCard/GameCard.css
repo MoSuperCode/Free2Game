@@ -54,21 +54,6 @@
     margin: 2rem;
 }
 
-.SortBtn {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.SortBtn Button {
-    margin: 1rem;
-    background-color: red;
-    color: aliceblue;
-    font-size: 15pt;
-    border-radius: 1rem;
-    padding: .3rem .5rem;
-    text-align: center;
-}
 
 button {
     border: none;
